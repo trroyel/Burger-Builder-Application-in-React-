@@ -9,11 +9,11 @@ const burger = (props) => {
     let transformedIngredients =
         // get all object property names
         Object.keys(props.ingerdients).map(igKey => {
-            console.log(igKey);
+            //console.log(igKey);
             //Create an empty array with lenght of property value
             //And iterate it again by map.
             return [...Array(props.ingerdients[igKey])].map((_, i) => {
-                console.log(i);
+                //console.log(i);
                 return <BurgerIngredient key={igKey + i} type={igKey} />
             });
 
