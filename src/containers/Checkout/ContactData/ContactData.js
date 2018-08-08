@@ -202,7 +202,7 @@ class ContactData extends Component {
 const mapStateToProps = state => {
     return {
         ingds: state.burgerBuilder.ingredients,
-        price: state.burgerBuilder.price,
+        price: state.burgerBuilder.totalPrice,
         loading: state.order.loading
     };
 };
