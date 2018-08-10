@@ -13,7 +13,7 @@ const asyncCheckout = asyncComponent(() => {
 });
 
 const asyncOrder = asyncComponent(() => {
-  return import('./containers/Checkout/Checkout');
+  return import('./containers/Orders/Orders');
 });
 
 const asyncAuth = asyncComponent(() => {
