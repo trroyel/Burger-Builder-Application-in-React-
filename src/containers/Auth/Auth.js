@@ -113,10 +113,18 @@ class Auth extends Component {
                 changed={(event) => this.inputChangedHandler(event, formElement.id)} />
         ));
 
+        //we can show spinner instead of form when loading
+        // if (this.props.loading) {
+        //     form = <Spinner />;
+        // }
         let spinner = this.props.loading ? <Spinner /> : null;
+
+        let errorMessage = this.props.error ? <p> {this.props.error.message}</p> : null;
+
 
         return (
             <div className={classes.Auth}>
+                {errorMessage}
                 {spinner}
                 <h2 style={{ textAlign: 'center', margin: '5px 0px' }}>LogIn To Continue</h2>
                 <form onSubmit={this.submitHandler}>
@@ -131,7 +139,8 @@ class Auth extends Component {
 
 const mapStateToProps = state => {
     return {
-        loading: state.auth.loading
+        loading: state.auth.loading,
+        error: state.auth.error
     };
 };
 
