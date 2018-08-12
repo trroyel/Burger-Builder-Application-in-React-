@@ -27,7 +27,6 @@ class App extends Component {
   }
 
   render() {
-
     let routes = (
       <Switch>
         <Route path="/login" component={asyncAuth} />
